@@ -48,6 +48,8 @@ public class ApplicationContext implements BeanFactory {
         doRegistry(beanDefinitions);
         //4、依赖注入 （lazy-init=false） 要执行依赖注入， 自动调用getBean方法
         doAutowired();
+
+        //test
         DemoAction demoAction = (DemoAction)beanWrapperMap.get("demoAction").getWrappedInstance();
         demoAction.query(null, null, "jake");
     }
