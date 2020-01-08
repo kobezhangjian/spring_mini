@@ -19,19 +19,19 @@ public class BeanDefinition {
 
 
     public void setBeanClassName(@Nullable String beanClassName){
-
+        this.beanClassName = beanClassName;
     }
 
     public String getBeanClassName() {
-        return null;
+        return beanClassName;
     }
 
     public String getFactoryBeanName() {
-        return null;
+        return factoryBeanName;
     }
 
     public void setFactoryMethodName(@Nullable String factoryMethodName) {
-
+        //this.factoryBeanName = factoryMethodName;
     }
 
     public void setLazyInit(boolean lazyInit) {

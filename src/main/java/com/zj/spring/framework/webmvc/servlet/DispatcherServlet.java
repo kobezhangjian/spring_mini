@@ -15,6 +15,8 @@ import java.io.IOException;
  */
 public class DispatcherServlet extends HttpServlet {
 
+    private final String LOCATION = "contextConfigLocation";
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         this.doPost(req, resp);
@@ -27,6 +29,6 @@ public class DispatcherServlet extends HttpServlet {
 
     @Override
     public void init(ServletConfig config) throws ServletException {
-        ApplicationContext context = new ApplicationContext();
+        ApplicationContext context = new ApplicationContext(config.getInitParameter(LOCATION));
     }
 }

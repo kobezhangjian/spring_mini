@@ -1,5 +1,10 @@
 package com.zj.spring.framework.core;
 
 public interface BeanFactory {
-    Object getBean(String name);
+    /**
+     *  从IOC容器中获取实例bean 根据beanName
+     * @param beanName
+     * @return
+     */
+    Object getBean(String beanName);
 }
